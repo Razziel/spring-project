@@ -21,5 +21,13 @@ public class TodoController {
     public Todo get(@PathVariable long id) {
         return repository.getOne(id);
     }
-    
+
+
+    @PostMapping("")
+    public void add(@RequestBody Todo task) {
+        repository.saveTask(task);
+    }
+
+
+
 }
