@@ -12,22 +12,25 @@ import java.util.List;
 public class TodoController {
     private final TodoRepository repository;
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("")
     public List<Todo> getAll() {
         return repository.findAll();
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/{id}")
     public Todo get(@PathVariable long id) {
         return repository.getOne(id);
     }
 
-
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("")
     public void add(@RequestBody Todo task) {
         repository.saveTask(task);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping("/{id}")
     public void delete(@PathVariable long id) {
         repository.deleteById(id);
