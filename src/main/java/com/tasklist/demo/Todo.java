@@ -1,16 +1,19 @@
 package com.tasklist.demo;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
+@Entity
+@Table(name = "Todo")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Todo {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)

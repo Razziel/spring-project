@@ -26,8 +26,8 @@ public class TodoController {
 
     @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("")
-    public void add(@RequestBody Todo task) {
-        repository.saveTask(task);
+    public void add(@RequestBody Todo todo) {
+        repository.saveTask(todo);
     }
 
     @CrossOrigin(origins = "http://localhost:4200")

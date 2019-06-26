@@ -1,7 +1,6 @@
 package com.tasklist.demo;
 
 
-import com.tasklist.demo.Todo;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
